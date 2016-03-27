@@ -17,8 +17,9 @@
 - 使用ツール：i2c-tools  
 - 対象モジュール：AQM0802  
 
-## Known issue | 既知の問題
-なぜか!が連続すると正しい文字列を表示しません。  
+## Mind the special characters | 特殊文字の扱い
+なぜか!が連続すると正しい文字列を表示しないなと思ったら、これって特殊文字でしたね。日付表示のコードを見ていて気がつきました。  
+bashの特殊文字を表示したい時は\でのエスケープを忘れずに。  
 
 ## License
 This script has released under the MIT license.  

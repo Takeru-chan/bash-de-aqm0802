@@ -63,7 +63,7 @@ else
         echo -n "Input second line > "
         read strings
     else
-        strings=`date +%H:%M_%a`
+        strings=`date +%H:%M\ %a`
     fi
 fi
 hexcode
