@@ -1,6 +1,6 @@
 # Shell script to display string on AQM0802
 会社帰りに千石電商で800円ほどの小さな液晶を買いました。Raspberry PiとI<sup>2</sup>Cで繋がるタイプのもので、裏側にAQM0802A-RN-GBWと印字されていました。  
-![AQM8020](./images/aqm8020.jpg)  
+![AQM0802](./images/aqm0802.jpg)  
 [スイッチサイエンスのブログ](http://mag.switch-science.com/2013/07/30/use-i2c-lcd-brakeout-board-on-raspberry-pi/)に載っていた使い方を参考に書いたシェルスクリプトです。  
 
 ## Usage | 使い方
