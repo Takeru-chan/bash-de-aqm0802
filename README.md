@@ -18,14 +18,12 @@
 - 対象モジュール：AQM0802  
 
 ## Mind the special characters | 特殊文字の扱い
-なぜか!が連続すると正しい文字列を表示しないなと思ったら、これって特殊文字でしたね。日付表示のコードを見ていて気がつきました。  
-bashの特殊文字を表示したい時は\でのエスケープを忘れずに。  
+なぜか!が連続すると正しい文字列を表示しないなと思ったら、これって特殊文字でしたね。日付表示のコードを見ていて気がつきました。bashの特殊文字を表示したい時は\でのエスケープを忘れずに。  
 
 ## License
 This script has released under the MIT license.  
 [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)  
 
 ## One more thing...
-日付と時刻を表示させたければハードリンクでgettimeという名前にして実行してください。自動的に１行目に年月日、２行目に時分と曜日を表示します。  
-cronで毎分実行させるとデジタル時計のできあがり。  
+今日の日付を表示させたければコマンド名をtodayに、合わせて時刻も表示させたければgettimeという名前にして実行してください。gettimeをcronで毎分実行させるとデジタル時計のできあがり。  
 ![デジタル時計Pi](./images/raspberrypi-with-aqm0802.jpg)  

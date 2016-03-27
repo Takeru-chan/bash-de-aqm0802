@@ -8,6 +8,10 @@ for index in `seq 0 $((${#0} -1))`; do
         end_path=$index
     fi
 done
+today=0
+if test "${0:$(($end_path + 1))}" == "today"; then
+    today=1
+fi
 gettime=0
 if test "${0:$(($end_path + 1))}" == "gettime"; then
     gettime=1
@@ -46,11 +50,13 @@ sudo i2cset -y 1 $device $send_command $init_second
 if test "$1" != ""; then
     strings=$1
 else
-    if test $gettime -eq 0; then
+    if test $gettime -eq 1; then
+        strings=`date +%Y%m%d`
+    elif test $today -eq 1; then
+        strings=`date +%d-%a`
+    else
         echo -n "Input first line > "
         read strings
-    else
-        strings=`date +%Y%m%d`
     fi
 fi
 hexcode
@@ -59,11 +65,13 @@ sudo i2cset -y 1 $device $send_command $position_10
 if test "$2" != ""; then
     strings=$2
 else
-    if test $gettime -eq 0; then
+    if test $gettime -eq 1; then
+        strings=`date +%H:%M\ %a`
+    elif test $today -eq 1; then
+        strings=`date +%b-%Y`
+    else
         echo -n "Input second line > "
         read strings
-    else
-        strings=`date +%H:%M\ %a`
     fi
 fi
 hexcode
