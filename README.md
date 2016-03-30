@@ -27,3 +27,7 @@ This script has released under the MIT license.
 ## One more thing...
 今日の日付を表示させたければコマンド名をtodayに、合わせて時刻も表示させたければgettimeという名前にして実行してください。gettimeをcronで毎分実行させるとデジタル時計のできあがり。  
 ![デジタル時計Pi](./images/raspberrypi-with-aqm0802.jpg)  
+もひとつtips。vcgencmdを利用したCPU温度の表示。  
+```
+/home/pi/disp.sh `vcgencmd measure_temp | sed 's/=/ /'`
+```
