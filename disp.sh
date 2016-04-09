@@ -38,9 +38,7 @@ function hexcode() {
     code=""
     if test ${#strings} -ne 0; then
         for index in `seq 0 $((${#strings} - 1))`; do
-            code_dec=`printf "%d" \'${strings:$index:1}`
-            code_hex=`printf "%x" $code_dec`
-            code="$code 0x$code_hex"
+            code="$code 0x`printf "%x" \'${strings:$index:1}`"
         done
     fi
 }
